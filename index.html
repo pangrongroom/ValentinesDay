@@ -14,13 +14,26 @@
             }
         </style>
         <link href="css/default.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="js/music.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/garden.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
     </head>
-
     <body>
+        <!-- http://music.163.com/song/media/outer/url?id=29750751.mp3
+            id='xxx'在网易云在线播放器搜索音乐可在url里获得该音乐id即可实现播放
+             -->
+        <audio
+            id="touchstart"
+            src="http://music.163.com/song/media/outer/url?id=29750751.mp3"
+            autoplay="autoplay"
+            loop="loop"
+            style="display: none"
+        >
+            Your browser does not support the audio element.
+        </audio>
         <div id="mainDiv">
+            <div id="jplayer"></div>
             <div id="content">
                 <div id="code">
                     <span class="comments">##</span><br />
@@ -80,10 +93,22 @@
                     <canvas id="garden"></canvas>
                     <div id="words">
                         <div id="messages">
-                            武兰兰, I have fallen in love with you for
-                            <div id="elapseClock"></div>
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                    transform: translateY(-100px);
+                                "
+                            >
+                                <img src="../ValentinesDay/img/love_1.jpg" alt="" width="80px" />
+                                <img src="../ValentinesDay/img/love_2.jpg" alt="" width="100px" />
+                            </div>
+                            <div style="transform: translateY(-80px)">
+                                武兰兰, I have fallen in love with you for
+                                <div id="elapseClock"></div>
+                            </div>
                         </div>
-                        <div id="loveu">
+                        <div id="loveu" style="transform: translateY(-80px)">
                             Love u forever and ever.<br />
                             <div class="signature">- 何波</div>
                         </div>
